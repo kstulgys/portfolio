@@ -30,8 +30,10 @@ import {
   Link as BaseLink,
 } from "@chakra-ui/core"
 import { useInView } from "react-intersection-observer"
+
 import About from "../components/about"
 import Events from "../components/events"
+// import useOnScreen from "../lib/useOnScreen"
 
 function IndexPage() {
   const [inView, setInView] = useState("about")

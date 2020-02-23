@@ -18,10 +18,10 @@ import carbon from "../images/carbon.png"
 import { motion } from "framer-motion"
 
 export default function Events({ setInView }) {
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
-    threshold: 0.5,
+  const [ref, inView] = useInView({
+    threshold: 0,
   })
+
   useEffect(() => {
     if (inView) {
       setInView("events")
