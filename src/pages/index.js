@@ -1,36 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React, { useRef, useEffect, useState } from "react"
-// import { Link } from "gatsby"
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
 import { motion } from "framer-motion"
-import {
-  FiHome,
-  FiBriefcase,
-  FiInfo,
-  FiUser,
-  FiMail,
-  FiLinkedin,
-  FiGithub,
-  FiFileText,
-  FiCalendar,
-  FiShare2,
-} from "react-icons/fi"
-import {
-  Box,
-  Flex,
-  Image,
-  Text,
-  PseudoBox,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
-  Grid,
-  Link as BaseLink,
-} from "@chakra-ui/core"
-import { useInView } from "react-intersection-observer"
+import { Box, Link as BaseLink } from "@chakra-ui/core"
 import About from "../components/about"
 import Events from "../components/events"
 import Creed from "../components/creed"
