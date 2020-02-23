@@ -17,6 +17,11 @@ import { useInView } from "react-intersection-observer"
 import carbon from "../images/carbon.png"
 import { motion } from "framer-motion"
 
+// const { useInView } =
+//   typeof window !== `undefined`
+//     ? require("react-intersection-observer")
+//     : { useInView: null }
+
 export default function Events({ setInView }) {
   const [ref, inView] = useInView({
     threshold: 0,

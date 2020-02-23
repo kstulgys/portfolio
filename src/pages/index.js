@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React, { useRef, useEffect, useState } from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+// import { Link } from "gatsby"
+// import Layout from "../components/layout"
+// import SEO from "../components/seo"
 import { motion } from "framer-motion"
 import {
   FiHome,
@@ -29,14 +29,14 @@ import {
   Grid,
   Link as BaseLink,
 } from "@chakra-ui/core"
-// import { useInView } from "react-intersection-observer"
+import { useInView } from "react-intersection-observer"
 
 import About from "../components/about"
 import Events from "../components/events"
-const { useInView } =
-  typeof window !== `undefined`
-    ? require("react-intersection-observer")
-    : { useInView: null }
+// const { useInView } =
+//   typeof window !== `undefined`
+//     ? require("react-intersection-observer")
+//     : { useInView: null }
 // import useOnScreen from "../lib/useOnScreen"
 
 function IndexPage() {

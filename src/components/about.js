@@ -15,12 +15,14 @@ import {
 import { Box, Flex, Image, Text, Link as BaseLink } from "@chakra-ui/core"
 import carbon from "../images/carbon.png"
 import Typed from "typed.js"
-import { Frame } from "framer"
+// import { Frame } from "framer"
+import { useInView } from "react-intersection-observer"
+
 import { motion } from "framer-motion"
-const { useInView } =
-  typeof window !== `undefined`
-    ? require("react-intersection-observer")
-    : { useInView: null }
+// const { useInView } =
+//   typeof window !== `undefined`
+//     ? require("react-intersection-observer")
+//     : { useInView: null }
 // import { useInView } from "react-intersection-observer"
 // const { useInView } = require("react-intersection-observer")
 // Wrap the require in check for window
@@ -39,26 +41,26 @@ const { useInView } =
 //   }
 // }
 
-function FadeInBox({ delay, y, x, children, ...props }) {
-  return (
-    <Flex {...props}>
-      <Frame
-        initial={{ y: y || 0, x: x || 0, opacity: 0 }}
-        animate={{ y: "0%", x: "0%", opacity: 1 }}
-        transition={{ duration: 1.5, delay: delay || 0 }}
-        background="inherit"
-        style={{
-          width: "100%",
-          position: "static",
-          height: "auto",
-          display: "flex",
-        }}
-      >
-        {children}
-      </Frame>
-    </Flex>
-  )
-}
+// function FadeInBox({ delay, y, x, children, ...props }) {
+//   return (
+//     <Flex {...props}>
+//       <Frame
+//         initial={{ y: y || 0, x: x || 0, opacity: 0 }}
+//         animate={{ y: "0%", x: "0%", opacity: 1 }}
+//         transition={{ duration: 1.5, delay: delay || 0 }}
+//         background="inherit"
+//         style={{
+//           width: "100%",
+//           position: "static",
+//           height: "auto",
+//           display: "flex",
+//         }}
+//       >
+//         {children}
+//       </Frame>
+//     </Flex>
+//   )
+// }
 
 export default function About({ setInView }) {
   const [ref, inView] = useInView({
@@ -251,19 +253,14 @@ export default function About({ setInView }) {
             </motion.div>
           </Flex>
 
-          <FadeInBox
-            delay={4.5}
-            y="5%"
-            width="50%"
-            display={["none", "none", "none", "block"]}
-          >
+          <Box display={["none", "none", "none", "block"]}>
             <Image
               width="full"
               src={carbon}
               borderRadius="lg"
               boxShadow="2xl"
             />
-          </FadeInBox>
+          </Box>
         </Flex>
       </Flex>
       <Creed setInView={setInView} />
