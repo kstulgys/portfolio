@@ -1,13 +1,13 @@
 import React from "react"
 import { AnimatePresence } from "framer-motion"
 
-async function loadPolyfills() {
-  if (typeof window.IntersectionObserver === "undefined") {
-    await import("intersection-observer")
-  }
-}
+// async function loadPolyfills() {
+//   if (typeof window.IntersectionObserver === "undefined") {
+//     await import("intersection-observer")
+//   }
+// }
 
-loadPolyfills()
+// loadPolyfills()
 
 export const wrapRootElement = ({ element }) => {
   return <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
