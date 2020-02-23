@@ -2,9 +2,7 @@ import React from "react"
 import { AnimatePresence } from "framer-motion"
 
 async function loadPolyfills() {
-  if (typeof window === "undefined") {
-    return
-  } else if (typeof window.IntersectionObserver === "undefined") {
+  if (typeof window.IntersectionObserver === "undefined") {
     await import("intersection-observer")
   }
 }
