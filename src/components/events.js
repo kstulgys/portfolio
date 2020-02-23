@@ -35,7 +35,7 @@ export default function Events({ setInView }) {
       id="events"
       elementRef={ref}
       p="4"
-      height={["calc(100vh + 4rem)", "100vh"]}
+      height={["calc(100vh + 10rem)", "100vh"]}
     >
       <Box width="full">
         <Grid

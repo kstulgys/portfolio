@@ -19,6 +19,7 @@ export default function Navigation({ inView }) {
 
   return (
     <Flex
+      zIndex="999"
       position="fixed"
       bottom="0"
       left="0"
