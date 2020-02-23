@@ -16,6 +16,7 @@ import { Box, Flex, Image, Text, Link, Grid, theme } from "@chakra-ui/core"
 import { useInView } from "react-intersection-observer"
 import carbon from "../images/carbon.png"
 import { motion } from "framer-motion"
+import Section from "./Section"
 
 export default function Events({ setInView }) {
   const [ref, inView] = useInView({
@@ -29,23 +30,12 @@ export default function Events({ setInView }) {
   }, [inView])
 
   return (
-    <Flex
-      bg="white"
+    <Section
+      bg="gray.100"
       id="events"
-      ref={ref}
-      height={[
-        "calc(100vh + 7rem)",
-        "calc(100vh + 7rem)",
-        "calc(100vh + 7rem)",
-        "100vh",
-      ]}
-      width="full"
+      elementRef={ref}
       p="4"
-      py={[4, 4, 4, "20"]}
-      overflowY="scroll"
-      css={{
-        scrollSnapAlign: "start",
-      }}
+      height={["calc(100vh + 4rem)", "100vh"]}
     >
       <Box width="full">
         <Grid
@@ -59,9 +49,9 @@ export default function Events({ setInView }) {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  //   maxHeight: 200,
                   borderRadius: theme.radii.md,
                   boxShadow: theme.shadows.md,
+                  background: "white",
                 }}
                 whileHover={{
                   y: -10,
@@ -69,7 +59,7 @@ export default function Events({ setInView }) {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link isExternal href={item.url} width="full" p="6">
+                <Link isExternal href={item.url} width="full" p="6" height="40">
                   <Flex flexDirection="column" height="full">
                     <Flex>
                       <Box>
@@ -84,7 +74,7 @@ export default function Events({ setInView }) {
                     <Box>
                       <Text>{item.location}</Text>
                     </Box>
-                    <Box mt="6">
+                    <Box mt="auto">
                       <Text fontWeight="semibold">{item.tag}</Text>
                     </Box>
                   </Flex>
@@ -94,7 +84,7 @@ export default function Events({ setInView }) {
           })}
         </Grid>
       </Box>
-    </Flex>
+    </Section>
   )
 }
 
