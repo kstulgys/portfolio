@@ -59,7 +59,7 @@ export default function Events({ setInView }) {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link isExternal href={item.url} width="full" p="6" height="40">
+                <Link isExternal href={item.url} width="full" p="6" height="48">
                   <Flex flexDirection="column" height="full">
                     <Flex>
                       <Box>

@@ -50,13 +50,13 @@ export default function Creed({ setInView }) {
   }, [inView, mounted])
 
   return (
-    <Section id="about" elementRef={ref} bg="white">
+    <Section id="about" elementRef={ref} bg="white" p="4">
       <Flex
         maxWidth="6xl"
         width="full"
         mx="auto"
         my="auto"
-        height={["410px", "50vh"]}
+        height={["full", "50vh"]}
       >
         <Flex
           height="full"

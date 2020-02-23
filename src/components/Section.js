@@ -6,6 +6,7 @@ import { Box, Flex } from "@chakra-ui/core"
 export default function Section({ id, bg, elementRef, ...props }) {
   return (
     <Flex
+      as="section"
       ref={elementRef}
       bg={bg}
       id={id}
