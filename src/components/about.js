@@ -18,7 +18,9 @@ import Typed from "typed.js"
 import { Frame } from "framer"
 import { motion } from "framer-motion"
 const { useInView } =
-  typeof window !== `undefined` ? require("react-intersection-observer") : null
+  typeof window !== `undefined`
+    ? require("react-intersection-observer")
+    : { useInView: null }
 // import { useInView } from "react-intersection-observer"
 // const { useInView } = require("react-intersection-observer")
 // Wrap the require in check for window

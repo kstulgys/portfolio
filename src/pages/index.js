@@ -29,10 +29,14 @@ import {
   Grid,
   Link as BaseLink,
 } from "@chakra-ui/core"
-import { useInView } from "react-intersection-observer"
+// import { useInView } from "react-intersection-observer"
 
 import About from "../components/about"
 import Events from "../components/events"
+const { useInView } =
+  typeof window !== `undefined`
+    ? require("react-intersection-observer")
+    : { useInView: null }
 // import useOnScreen from "../lib/useOnScreen"
 
 function IndexPage() {
