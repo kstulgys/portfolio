@@ -62,7 +62,7 @@ export default function Contact({ setInView }) {
           <BaseLink
             ml="3"
             isExternal
-            href="https://drive.google.com/open?id=1PpW9Cn4lVZVtGDmw7-QglurkV11Zyd9U"
+            href="https://drive.google.com/open?id=1TE8TMFrGXT09urYVuFyqWmiq6acuzBvZ"
           >
             <Box as={FiFileText} size="12" color="gray.900" strokeWidth="1.5" />
           </BaseLink>
